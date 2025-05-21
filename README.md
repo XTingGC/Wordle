@@ -12,10 +12,11 @@ El objetivo es evaluar tu dominio de React, arquitectura de componentes, buenas 
 
 - El usuario debe poder jugar una partida de Wordle.
 - Cada intento debe validar una palabra y mostrar visualmente si las letras son:
-  - Correctas y en la posición correcta (verde).
+  - Correctas y en la posición correcta (verde) .
   - Correctas pero en la posición incorrecta (amarillo).
   - Incorrectas (gris).
 - Al acertar la palabra o agotar los intentos, debe mostrarse un mensaje de fin de juego.
+- La palabra correcta por defecto es ESAVE 
 
 ---
 
