@@ -72,4 +72,21 @@ No buscamos perfección, sino una muestra realista de cómo trabajas.
 
 ---
 
+## 🕒 Seguimiento de tiempo (sin presión)
+
+No hay un límite estricto de tiempo para esta prueba. Sin embargo, nos interesa tener una idea del tiempo real que has dedicado, para poder valorar tu trabajo en su contexto.
+
+#### ✅ Te pedimos por favor:
+
+- **Haz commits frecuentes** durante el desarrollo.  
+  Esto nos permite ver cómo abordas el problema paso a paso.
+
+- **Incluye en el `README.md` final** una nota con la siguiente información:
+
+> "Comencé la prueba el [día] a las [hora], y la terminé el [día] a las [hora]."
+
+No usamos esta información para penalizar, solo para entender mejor tu ritmo y tu proceso de trabajo. 🙌
+
+--- 
+
 ¡Gracias por tu tiempo y suerte! 🍀
