@@ -1,0 +1,12 @@
+{
+  "name": "hexawordle",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start-express\"",
+    "start-express": "cd api && npm start",
+    "install-deps": "concurrently \"cd api && npm install\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
