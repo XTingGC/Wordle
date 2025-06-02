@@ -67,8 +67,7 @@ No buscamos perfección, sino una muestra realista de cómo trabajas.
 
 ## 🚀 Entrega
 
-- Sube tu solución a un repositorio privado en GitHub/GitLab.
-- Comparte el acceso con nosotros o envíanos un enlace descargable.
+- Haz una **Merge Request** a este mismo repositorio con tu rama para que podamos ver tus cambios 
 - Incluye un `README.md` explicando cómo ejecutar tu solución.
 
 ---
