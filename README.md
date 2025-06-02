@@ -67,8 +67,11 @@ No buscamos perfección, sino una muestra realista de cómo trabajas.
 
 ## 🚀 Entrega
 
-- Haz una **Merge Request** a este mismo repositorio con tu rama para que podamos ver tus cambios 
-- Incluye un `README.md` explicando cómo ejecutar tu solución.
+  Sube tu solución a un repositorio privado o público en tu cuenta de GitHub o GitLab.
+
+  Envíanos el enlace al repositorio por correo para que podamos revisarlo.
+
+  Incluye un archivo README.md explicando cómo ejecutar tu solución.
 
 ---
 
