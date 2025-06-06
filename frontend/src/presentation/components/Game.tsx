@@ -14,7 +14,7 @@ export const Game = () => {
   );
 
   return (
-    <div className="bg-[#121213] w-[500px] flex">
+    <div className={styles.game}>
       <div className={styles.board}>
         {emptyRows.map((row, i) => (
           <div className={styles.row} key={i}>
