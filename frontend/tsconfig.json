@@ -1,7 +1,31 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compileOnSave": false,
+  "include": [
+    "./src/**/*",
+    "./config/test/jest.setup.ts",
+    "./config/style/tailwind.config.ts"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "lib": ["esnext", "dom"],
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "declaration": false,
+    "strict": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "esnext",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+  }
 }
