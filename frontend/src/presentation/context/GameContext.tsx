@@ -1,0 +1,22 @@
+import { createContext, type ReactNode } from "react"
+import { useGame } from "../hooks/useGame"
+import { useContext } from "../hooks/useContext"
+
+type GameContextType = ReturnType<typeof useGame>
+
+const GameContext = createContext<GameContextType | null>(null)
+export const useGameContext = () => useContext(GameContext)
+
+type Props = {
+  children: ReactNode
+}
+
+export const GameProvider = ({ children }: Props) => {
+  const contextValue = useGame()
+
+  return (
+    <GameContext.Provider value={contextValue}>
+      {children}
+    </GameContext.Provider>
+  )
+}
