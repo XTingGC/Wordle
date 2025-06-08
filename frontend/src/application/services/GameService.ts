@@ -36,24 +36,15 @@ export class GameService {
     try {
       const response = await wordleApi.makeGuess(word)
       const guess = new Word(word)
-      const resultParts = response.result.split(', ')
-      let currentIndex = 0
-      for (const part of resultParts) {
-        const count = parseInt(part.split(' ')[0])
-        if (part.includes('posición y letra correcta')) {
-          for (let i = 0; i < count; i++) {
-            guess.setLetterStatus(currentIndex + i, 'correct')
-          }
-        } else if (part.includes('posición incorrecta y letra correcta')) {
-          for (let i = 0; i < count; i++) {
-            guess.setLetterStatus(currentIndex + i, 'present')
-          }
-        } else if (part.includes('letra no existe en la palabra')) {
-          for (let i = 0; i < count; i++) {
-            guess.setLetterStatus(currentIndex + i, 'absent')
-          }
+      for (let i = 0; i < response.result.length; i++) {
+        const code = response.result[i]
+        if (code === '2') {
+          guess.setLetterStatus(i, 'correct')
+        } else if (code === '1') {
+          guess.setLetterStatus(i, 'present')
+        } else {
+          guess.setLetterStatus(i, 'absent')
         }
-        currentIndex += count
       }
       this.attempts.push(guess)
       this.hasWon = response.isGameWon
