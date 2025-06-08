@@ -1,0 +1,27 @@
+
+@import "tailwindcss";
+
+.keyboard {
+    @apply w-full max-w-[500px] flex flex-col gap-2;
+  }
+  
+  .keyboardRow {
+    @apply flex justify-center gap-1.5;
+  }
+  
+  .key {
+    @apply min-w-[40px] h-14 px-2 rounded bg-[#d3d6da] text-sm font-bold uppercase cursor-pointer
+           hover:bg-[#c0c3c7] active:bg-[#b0b3b7] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .keyIcon {
+    @apply text-lg;
+  }
+
+  @media (max-width: 500px) {
+  
+    .key {
+      @apply min-w-[30px] h-12 text-xs;
+    }
+  }
+  
