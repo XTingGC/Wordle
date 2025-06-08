@@ -1,14 +1,19 @@
-import { createContext, type ReactNode } from "react"
+import { createContext, useContext, type ReactNode } from "react"
 import { useGame } from "../hooks/useGame"
-import { useContext } from "../hooks/useContext"
+
 
 type GameContextType = ReturnType<typeof useGame>
 
 const GameContext = createContext<GameContextType | null>(null)
-export const useGameContext = () => useContext(GameContext)
+
+export const useGameContext = () => {
+  const ctx = useContext(GameContext)
+  if (!ctx) throw new Error("useGameContext must be used within a GameProvider")
+  return ctx
+}
 
 type Props = {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export const GameProvider = ({ children }: Props) => {
