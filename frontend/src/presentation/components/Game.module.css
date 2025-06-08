@@ -9,34 +9,69 @@
 }
 
 .game {
-  @apply flex flex-col items-center p-4 max-w-[500px] mx-auto bg-light-gray rounded-lg;
+  @apply flex flex-col items-center p-4 max-w-[500px] mx-auto;
 }
 
 .board {
-  @apply flex flex-col gap-1 my-5;
+  @apply mb-8;
 }
 
 .row {
-  @apply flex gap-1;
+  @apply flex gap-2 mb-2;
 }
 
 .tile {
-  @apply w-[60px] h-[60px] border-2 border-gray flex justify-center items-center text-3xl font-bold uppercase bg-white transition-all duration-200;
+  @apply w-14 h-14 flex items-center justify-center text-2xl font-bold border-2 border-gray-300 uppercase;
+}
+
+.tile.correct {
+  @apply bg-[#6aaa64] border-[#6aaa64] text-white;
+}
+
+.tile.present {
+  @apply bg-[#c9b458] border-[#c9b458] text-white;
+}
+
+.tile.absent {
+  @apply bg-[#787c7e] border-[#787c7e] text-white;
 }
 
 .keyboard {
-  @apply flex flex-col gap-2 mt-5 w-full;
+  @apply w-full max-w-[500px] flex flex-col gap-2;
 }
 
 .keyboardRow {
-  @apply flex justify-center gap-1.5 w-full;
+  @apply flex justify-center gap-1.5;
 }
 
 .key {
-  @apply min-w-[40px] h-[58px] rounded border-none bg-light-gray text-gray font-bold cursor-pointer uppercase flex justify-center items-center px-2.5 transition-colors duration-200 hover:bg-hover-gray;
+  @apply min-w-[40px] h-14 px-2 rounded bg-[#d3d6da] text-sm font-bold uppercase cursor-pointer
+         hover:bg-[#c0c3c7] active:bg-[#b0b3b7] disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
 .keyIcon {
-  @apply flex items-center justify-center;
+  @apply text-lg;
+}
+
+.error {
+  @apply text-red-500 mb-4 text-center;
+}
+
+.message {
+  @apply text-yellow-600 mb-4 text-center;
+}
+
+.gameOver {
+  @apply text-xl font-bold mb-4 text-center;
+}
+
+@media (max-width: 500px) {
+  .tile {
+    @apply w-12 h-12 text-xl;
+  }
+
+  .key {
+    @apply min-w-[30px] h-12 text-xs;
+  }
 }
 
