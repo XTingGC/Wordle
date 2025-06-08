@@ -12,29 +12,6 @@
   @apply flex flex-col items-center p-4 max-w-[500px] mx-auto;
 }
 
-.board {
-  @apply mb-8;
-}
-
-.row {
-  @apply flex gap-2 mb-2;
-}
-
-.tile {
-  @apply w-14 h-14 flex items-center justify-center text-2xl font-bold border-2 border-gray-300 uppercase;
-}
-
-.tile.correct {
-  @apply bg-[#6aaa64] border-[#6aaa64] text-white;
-}
-
-.tile.present {
-  @apply bg-[#c9b458] border-[#c9b458] text-white;
-}
-
-.tile.absent {
-  @apply bg-[#787c7e] border-[#787c7e] text-white;
-}
 
 
 .error {
