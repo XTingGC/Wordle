@@ -63,3 +63,5 @@ frontend/
 ---
 
 ¡Disfruta jugando y aprendiendo con este clon de Wordle!
+
+> "Comencé la prueba el viernes 06/06 a las 21:00, y la terminé el 08 a las 23:00."
