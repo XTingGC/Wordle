@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# Wordle Clone — React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un clon del popular juego **Wordle**, desarrollado con **React**, **TypeScript** y **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Instalación y ejecución
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clona el repositorio:**
+   ```bash
+   git clone <url-del-repo>
+   cd frontend
+   ```
 
-## Expanding the ESLint configuration
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. **Configura la API:**
+   - Asegúrate de que la API de Wordle esté corriendo en `http://localhost:3000`.
+   - Si necesitas cambiar la URL, crea un archivo `.env` en la raíz del frontend:
+     ```env
+     VITE_API_URL=http://localhost:3000
+     ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+4. **Inicia la aplicación:**
+   ```bash
+   npm run dev
+   ```
+   Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
+
+## ✅ Características principales
+
+- Juega partidas de Wordle con validación de palabras.
+- Colores visuales:
+  - Verde: letra correcta y en la posición correcta.
+  - Amarillo: letra correcta pero en posición incorrecta.
+  - Gris: letra incorrecta.
+- Mensaje de fin de juego al ganar o perder.
+- Teclado virtual y soporte de teclado físico.
+- Reinicio de partida.
+
+## 🛠️ Tecnologías usadas
+- React + TypeScript
+- Vite
+- Tailwind CSS (para estilos)
+- ESLint + Prettier
+
+## 📦 Estructura del proyecto
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+frontend/
+  ├─ src/
+  │   ├─ application/         # Casos de uso y lógica de negocio
+  │   ├─ domain/              # Entidades y repositorios
+  │   ├─ infrastructure/      # API, endpoints, normalización
+  │   ├─ presentation/        # Componentes y hooks de React
+  │   └─ ...
+  ├─ public/
+  ├─ index.html
+  ├─ package.json
+  └─ README.md
 ```
+---
+
+¡Disfruta jugando y aprendiendo con este clon de Wordle!
